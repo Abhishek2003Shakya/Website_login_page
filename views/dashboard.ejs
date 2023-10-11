@@ -1,0 +1,48 @@
+<!-- adding header  -->
+
+
+<!-- chatting design  -->
+<link rel="stylesheet" href="css/chat.css">
+<div class="row">
+  <div class="col-md-3">
+    <ul class="list-group">
+        <% if (users.length > 0) {
+            for (let i=0; i<users.length; i++) {
+                %>
+                <li class="user-list">
+                    <img src="<%= 'http://127.0.0.1:3000'+users[i]["image"] %>" alt="" width="100px" height="100px">
+                    <%= users[i]["name"] %>
+                </li>
+                <%
+                
+            }
+        } %>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <h3 class="start-head">click to start chat</h3>
+    <div class="chat-section">
+        <div id="chat-container">
+        </div>
+
+        <form action="" id="chat-form">
+            <input type="text" name="message" placeholder="Enter Message" id="message" required>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".user-list").click(function(){
+            $(".start-head").hide();
+            $(".chat-section").show();
+        });
+    });
+</script>
+
+<!-- adding footer  -->
+<%- include('layouts/footer.ejs') %>
+
+<!-- <a href="/logout">Logout</a> -->

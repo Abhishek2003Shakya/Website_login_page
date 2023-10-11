@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBuddy</title>
+    <!--=========== https://fontawesome.com/ ===================-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/Style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar">
+        <h1 class="title-1">ChatBuddy</h1>
+
+        <div class="profile_wrap">
+          <div class="profile_img">
+            <img src="Avatar.svg" alt="" />
+          </div>
+          <div class="profile_info">
+            <h2 class="name"><%= user.name %></h2>
+            <!-- <p class="role">Administrstor</p> -->
+          </div>
+        </div>
+
+        <ul>
+          <li>
+            <a href="/dashboard" class="active">
+              <span class="icon"><i class="fa fa-tachometer-alt"></i></span>
+              <span class="title_2">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/logout">
+              <span class="icon"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></span>
+              <span class="title_2">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
